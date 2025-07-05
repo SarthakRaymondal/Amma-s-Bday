@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dad's Bday</title>
+    <link rel="icon" types="images/jpeg" href="thumbnail.jpeg">
+    <style>
+        body {
+            margin: 0;
+            /*background: url(bg1.webp);*/
+            background: linear-gradient(to right,#d1bd8e,#d1ba9f);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .dark-layer {
+            display: none;
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -5;
+            top: 0;
+            left: 0;
+        }
+        .font1 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+            }
+        .title1 {
+            font-size: 70px;
+            color: white;
+            font-weight: 900;
+            text-align: center;
+            user-select: none;
+            animation-name: anim1;
+            animation-duration: 2s;
+            margin-top: 0;
+        }
+        .div1 {
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation-name: anim1;
+            animation-duration: 4s;
+        }
+        .font2 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.div2 {
+    width: 90%;
+    height: 100%;
+    background: rgba(227, 213, 197,0.8);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+}
+@keyframes anim1 {
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+}
+.bt1 {
+    background: #c9b697;
+    border: none;
+    width: 130px;
+    height: 50px;
+    border-radius: 8px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.bt1:hover {
+    filter: brightness(90%);
+}
+.bt2 {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    border: none;
+    width: 170px;
+    height: 50px;
+    border-radius: 8px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    cursor: pointer;
+    color: white;
+}
+.bt2:hover {
+    filter: brightness(90%);
+}
+.msgb1 {
+    position: fixed;
+    bottom: 30px;
+    width: 80%;
+    height: 40px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+} 
+.img1 {
+    transition: 0.5s;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.img1:hover {
+    transform: rotateZ(10deg);
+}
+.fake1 {
+    background: rgba(255,255,255,0);
+    border: none;
+    cursor: pointer;
+}
+.dark-layer2 {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(19, 18, 18, 0.8);
+    z-index: 2;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+    </style>
+</head>
+<body class="font1" id="body">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <div class="dark-layer"><!--Not used keep in mind--></div>
+    <br><div style="width: 100%;display: flex;justify-content: center; align-items: center;"><button class="fake1"><img src="Amma1.jpg" height="120" class="img1" onclick="open1()"></button></div>
+    <div class="dark-layer2" id="dl2">
+        <div>
+            <div style="width: 100%;display: flex;justify-content: right;"><button class="fake1" ><img src="close1.svg" height="30" onclick="close1()"></button></div>
+            <div style="width: 100%;display: flex;justify-content: center;"><img src="Amma1.jpg" height="250"></div>
+            <p style="color: white;font-size: 30px;text-align: center;font-weight: 900;" id="ttbt1">Picture of our beloved Amma</p>
+                        <div style="width: 100%;display: flex;justify-content: center;"><a href="Amma1.jpg" download="Ammapic"><button class="bt2"><a class="font1" style="font-weight: 900;">Download image</a></button></a></div>
+        </div>
+    </div>
+    <p class="title1">Happy Birthday Amma</p>
+    <div class="div1">
+        <div class="div2">
+            <div style="margin-left: 15px;text-align: justify;text-justify: inter-word;margin-right: 15px;">
+                <br><a class="font1" style="color: black;font-size: 20px;font-weight: 900;"><span id="msg1">Happy birthday Amma! I miss your warm presence, your comforting words, and all the little things that made you so special. Even though you're not here with us, your love continues to be a guiding light for all our lives. Every memory of you is a treasure we hold close to our heart. So once again happy birthday!</span><br><br><span style="font-style: italic;" id="author">-Ryan</span><br><br></a>
+            </div>
+            <div style="width: 100%;display: flex;user-select: none;"><button class="bt1" onclick="copy1()"><img src="cpyicon.svg"><a style="margin-left: 2px;font-size: 20px;font-weight: 900;color:#434343" class="font1">Copy</a></button><button class="bt1" onclick="translate1()"><img src="translate1.svg"><a style="margin-left: 2px;font-size: 15px;font-weight: 900;color:#434343;" class="font1" id="tc1">Translate to Bengali</a></button></div><br>
+        </div> 
+    </div><br><br>
+    <input type="text" value="Happy birthday Amma! I miss your warm presence, your comforting words, and all the little things that made you so special. Even though you're not here with us, your love continues to be a guiding light for all our lives. Every memory of you is a treasure we hold close to our heart. So once again happy birthday!" id="itbc1" style="display: none;">
+    <div style="position: fixed;width: 100%;display: flex;justify-content: center;align-items: center;opacity: 0;transition: 0.5s;user-select: none ;" id="pfa1"><div class="msgb1"><img src="tick1.svg"><a>Message copied to clipboard</a></div></div>
+<script>
+    var tgl1 = 0
+    var bs = "শুভ জন্মদিন আম্মা! তোমার উষ্ণ উপস্থিতি, তোমার সান্ত্বনার কথা এবং তোমাকে এত বিশেষ করে তুলেছে এমন ছোট ছোট জিনিসগুলো আমি মিস করছি। তুমি আমাদের সাথে না থাকলেও, তোমার ভালোবাসা আমাদের সকলের জীবনের পথপ্রদর্শক হয়ে থাকবে। তোমার প্রতিটি স্মৃতি আমাদের হৃদয়ের কাছে ধারণ করা এক মূল্যবান সম্পদ। তাই আবারও জন্মদিনের শুভেচ্ছা!"
+    var es = "Happy birthday Amma! I miss your warm presence, your comforting words, and all the little things that made you so special. Even though you're not here with us, your love continues to be a guiding light for all our lives. Every memory of you is a treasure we hold close to our heart. So once again happy birthday!"
+    var cbt1c = false
+    function copy1() {
+          var copyText = document.getElementById("itbc1");
+
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); 
+
+  navigator.clipboard.writeText(copyText.value);
+        if(cbt1c === false) {
+            cbt1c = true
+            document.getElementById("pfa1").style.opacity = 1;
+            setTimeout(end1,3000)
+            function end1() {
+                document.getElementById("pfa1").style.opacity = 0;
+                cbt1c = false
+            }
+        }
+    }
+    function translate1() {
+        if(tgl1 === 0) {
+            tgl1 = 1
+            document.getElementById("msg1").innerHTML = bs;
+            document.getElementById("author").innerHTML = "-রায়ান"
+            document.getElementById("itbc1").value = bs
+            document.getElementById("tc1").innerHTML = "Translate to English"
+            document.getElementById("ttbt1").innerHTML = "আমাদের প্রিয় আম্মার ছবি"
+        }
+        else {
+            tgl1 = 0
+            document.getElementById("msg1").innerHTML = es;
+            document.getElementById("author").innerHTML = "-Ryan"
+            document.getElementById("itbc1").value = es
+            document.getElementById("tc1").innerHTML = "Translate to Bengali"
+                        document.getElementById("ttbt1").innerHTML = "Picture of our beloved Amma"
+        }
+    }
+    function open1() {
+        document.getElementById("dl2").style.display = "flex"
+        document.getElementsByTagName("body")[0].style.overflow = "hidden";
+    }
+    function close1() {
+        document.getElementById("dl2").style.display = "none"
+        document.getElementsByTagName("body")[0].style.overflow = "visible"
+    }
+</script>
+</body>
+</html>
